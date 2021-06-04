@@ -1,6 +1,6 @@
 Name:           gsm
 Version:        1.0.18
-Release:        4
+Release:        5
 Summary:        GSM speech compressor Shared libraries and Utilities
 License:        MIT
 URL:            http://www.quut.com/gsm/
@@ -12,6 +12,8 @@ Patch1:         gsm-warnings.patch
 
 Provides:       gsm-tool
 Obsoletes:      gsm-tool
+
+BuildRequires:	gcc
 
 %description
 Contains the library for a GSM speech compressor, libgsm implements the European
@@ -72,5 +74,8 @@ make addtst
 %{_mandir}/man*/*
 
 %changelog
+* Fri Jun 4 2021 wangkerong <wangkerong@huawei.com> 1.0.18-5
+- Add a BuildRequires for gcc 
+
 * Wed Sep 18 2019 chenzhenyu <chenzhenyu13@huawei.com> - 1.0.8-4
 - Package init
