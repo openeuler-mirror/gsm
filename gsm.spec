@@ -1,6 +1,6 @@
 Name:           gsm
 Version:        1.0.18
-Release:        5
+Release:        6
 Summary:        GSM speech compressor Shared libraries and Utilities
 License:        MIT
 URL:            http://www.quut.com/gsm/
@@ -9,6 +9,7 @@ Source0:        http://www.quut.com/gsm/%{name}-%{version}.tar.gz
 # below patches are from redhat.
 Patch0:         gsm-makefile.patch
 Patch1:         gsm-warnings.patch
+Patch2:         support-specify-cc.patch
 
 Provides:       gsm-tool
 Obsoletes:      gsm-tool
@@ -74,6 +75,9 @@ make addtst
 %{_mandir}/man*/*
 
 %changelog
+* Fri Apr 14 2023 jammyjellyfish <jammyjellyfish255@outlook.com> - 1.0.18-6
+- Support specify CC
+
 * Fri Jun 4 2021 wangkerong <wangkerong@huawei.com> 1.0.18-5
 - Add a BuildRequires for gcc 
 

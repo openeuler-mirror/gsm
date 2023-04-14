@@ -1,0 +1,13 @@
+diff -up gsm-1.0-pl18/Makefile.orig gsm-1.0-pl18/Makefile
+--- gsm-1.0-pl18/Makefile.orig	2023-04-14 22:20:16.910186912 +0800
++++ gsm-1.0-pl18/Makefile	2023-04-14 22:25:09.582803780 +0800
+@@ -43,7 +43,8 @@ WAV49	= -DWAV49
+ # CC		= /usr/lang/acc
+ # CCFLAGS 	= -c -O
+ 
+-CC		= gcc -ansi -pedantic
++CC		?= gcc
++CC		:= $(CC) -ansi -pedantic
+ CCFLAGS 	= -c $(RPM_OPT_FLAGS) -DNeedFunctionPrototypes=1 -Wall -Wno-comment -D_XOPEN_SOURCE=700 -D_REENTRANT -fPIC
+ 
+ LD 		= $(CC)
